@@ -27,6 +27,7 @@ Water Resources Division <br>
   
 <h1 align="center">Introduction</h1>
  &nbsp;&nbsp;&nbsp;&nbsp; In the UK, extreme weather events—especially flooding—have become much more frequent and severe due to climate change. However, the effects of these environmental risks are intricately linked to social injustices rather than being solely a physical or infrastructure issue. Communities that are socially vulnerable and impoverished frequently live in high-risk flood zones and typically lack the social and economic resources needed for quick recovery and resilience. This term project's main goal is to identify and examine the spatial connections between social deprivation and flood hazards. This study attempts to map these overlapping risks using open-source data from the UK Environment Agency (flood risk areas) and the UK Government's Index of Multiple Deprivation (IMD).
+ 
 ## Study Area
  &nbsp;&nbsp;&nbsp;&nbsp; This term project's geographical focus includes the Thames River Basin in the United Kingdom and the Greater London area. Because of its unique combination of complex riverine and coastal flood exposure along with a variety of socioeconomic neighborhood profiles, this area was chosen as the spatial bounding box (Extent: X: 499000 to 585000, Y: 138000 to 191000 in EPSG:27700, British National Grid). 
  
@@ -54,11 +55,13 @@ Description: The IMD evaluates relative deprivation across neighborhoods by comb
 ### Data Integration Strategy
  &nbsp;&nbsp;&nbsp;&nbsp; The Uber H3 Discrete Global Grid System (DGGS) will be used to harmonize these datasets because they have essentially different formats (tabular data for social indices and spatial polygons for floods). The IMD deprivation scores and the flood risk percentages will be combined into homogeneous H3 hexagonal cells (e.g., Resolution 8) to produce a standardized, clean dataset that is prepared for machine learning algorithms.
 
-## Description of the Baseline Method:
+## General Description of the Baseline Method
 &nbsp;&nbsp;&nbsp;&nbsp;  In this term project, K-Means Clustering is selected as the baseline machine learning method. K-Means is a highly efficient, unsupervised learning algorithm that partitions data into distinct clusters based on feature similarity. The integrated dataset, structured within the H3 hexagonal grid system, contains both physical flood hazard probabilities and socio-economic deprivation (IMD) scores. This data will be fed into the K-Means algorithm to group the spatial units (hexagons) into fundamental categories, such as Low, Moderate, and High-Risk clusters.
+
  &nbsp;&nbsp;&nbsp;&nbsp; At this baseline stage, the clustering relies on the statistical attributes of the data rather than their geographical proximity or spatial density. The reason for establishing this K-Means as a baseline is:
 •	It provides a fundamental understanding of the statistical correlations between flood exposure and social vulnerability.
 •	it serves as a performance benchmark.
+
  &nbsp;&nbsp;&nbsp;&nbsp; In the subsequent phases of the project, this attribute-based baseline will be compared against advanced spatial algorithms, specifically DBSCAN (Density-Based Spatial Clustering of Applications with Noise). This comparison will demonstrate the added value of incorporating spatial neighborhood dynamics and density into identifying critical vulnerability hotspots.
 
 <h1 align="center">Literature Review</h1>
@@ -127,6 +130,8 @@ Description: The IMD evaluates relative deprivation across neighborhoods by comb
 
 <h1 align="center">Preliminary Results</h1>
 
+### H3 Discrete Global Grid System (DGGS) Part
+
 &nbsp;&nbsp;&nbsp;&nbsp;The initial phase of the project involved importing and preprocessing the spatial datasets within a Python environment using Google Colab. The UK LSOA boundary data was processed utilizing the geopandas and h3 libraries to generate the foundational Discrete Global Grid System (DGGS) at Resolution 8. During the H3 hex-binning process, several invalid geometries and topological errors were detected within the clipped boundary data. Instead of algorithmic failure, a try-except validation pipeline was implemented to isolate and skip these corrupted multi-polygons, ensuring a robust and clean H3 spatial grid for further analysis.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Following the generation of the grid, the H3 hexagons were exported and visualized in QGIS. The preliminary maps below (FIG.1) demonstrate the overlay of the transparent H3 grid with the physical flood hazard polygons (RoFRS). The baseline (K-Means) clustering phase is made possible by this visual output, which validates the spatial data integration for the term project.
@@ -140,3 +145,33 @@ Description: The IMD evaluates relative deprivation across neighborhoods by comb
 <i><b>Fig. 1:</b> Spatial integration of complex flood extent polygons within the scalable H3 Discrete Global Grid System (DGGS) framework.</i>
 
 </div>
+
+
+### Baseline Method Part
+&nbsp;&nbsp;&nbsp;&nbsp; In accordance with the project guidelines, **K-Means Clustering** was selected as the baseline method to serve as a fundamental reference point for evaluating more advanced spatial data mining algorithms. To construct this model, the study area was tessellated into the H3 Discrete Global Grid System (DGGS) at Resolution 8. 
+
+Two critical features were engineered for each hexagonal cell using spatial join and overlay techniques:
+1. **Flood Percentage:** The area ratio of the UK Environment Agency's flood risk polygons (`rofrs_4band`) intersecting with the cell.
+2. **Social Deprivation Score:** The Index of Multiple Deprivation (IMD) score extracted from the underlying LSOA boundaries.
+
+The K-Means algorithm (`k=3`) was then applied to these two features, mathematically categorizing the geographic space into three distinct risk clusters: Low Risk (0), Medium Risk (1), and High Risk (2), without providing any prior geographic coordinate information to the machine.
+
+---
+
+ The baseline clustering results were visualized in QGIS by categorizing the H3 grids based on their assigned `Risk_Cluster` values.
+
+<div align="center">
+
+<img width="923" height="462" alt="Screenshot 2026-05-08 at 02 31 56" src="https://github.com/user-attachments/assets/6af6e005-3c23-4a55-b11f-8509d482e253" />
+
+<br>
+
+<i><b>Fig. 2:</b> Spatial distribution of K-Means baseline clustering (Green: Low Risk, Yellow: Medium Risk, Red: High Risk) overlaid with actual flood extent polygons (blue) within the scalable H3 DGGS framework.</i>
+
+</div>
+
+<h1 align="center">Analysis of the Baseline Output</h1>
+
+&nbsp;&nbsp;&nbsp;&nbsp;The generated heatmap demonstrates a consistent spatio-temporal pattern. As visually verified in **Fig. 2**, the 'High Risk' clusters (represented by red hexagons) strongly coincide with the physical distribution of river and sea flooding areas (blue polygons). Furthermore, the transition zones (yellow hexagons) buffer these critical areas. This initial outcome demonstrates that the baseline machine learning model effectively captures the intricate relationship between socioeconomic deprivation and physical flood hazards.
+
+
