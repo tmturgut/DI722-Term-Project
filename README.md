@@ -22,3 +22,108 @@ Water Resources Division <br>
 </div>
 
 <hr>
+
+  
+  
+# Introduction 
+ &nbsp;&nbsp;&nbsp;&nbsp; In the UK, extreme weather events—especially flooding—have become much more frequent and severe due to climate change. However, the effects of these environmental risks are intricately linked to social injustices rather than being solely a physical or infrastructure issue. Communities that are socially vulnerable and impoverished frequently live in high-risk flood zones and typically lack the social and economic resources needed for quick recovery and resilience. This term project's main goal is to identify and examine the spatial connections between social deprivation and flood hazards. This study attempts to map these overlapping risks using open-source data from the UK Environment Agency (flood risk areas) and the UK Government's Index of Multiple Deprivation (IMD).
+## Study Area
+ &nbsp;&nbsp;&nbsp;&nbsp; This term project's geographical focus includes the Thames River Basin in the United Kingdom and the Greater London area. Because of its unique combination of complex riverine and coastal flood exposure along with a variety of socioeconomic neighborhood profiles, this area was chosen as the spatial bounding box (Extent: X: 499000 to 585000, Y: 138000 to 191000 in EPSG:27700, British National Grid). 
+## Dataset Introduction
+ To achieve the objectives of this spatial data mining project, two distinct and open-source datasets from the United Kingdom are utilized. These datasets provide the foundational physical and socio-economic variables required for the clustering analysis.
+
+### 1. Flood Hazard Data (Physical Dimension)
+Source: UK Environment Agency (EA) Open Data portal.
+
+Dataset: Risk of Flooding from Rivers and Sea (RoFRS) or historical Flood Warnings.
+
+Format: Spatial vector data (Shapefile / GeoPackage).
+
+Description: This spatial dataset maps the geographical extent and probability of flood risks across the selected study area. It serves as the primary environmental hazard indicator, delineating which regions are geographically exposed to potential inundation.
+
+### 2. Social Vulnerability Data (Socio-economic Dimension)
+Source: UK Government Open Data.
+
+Dataset: The English Indices of Deprivation / Index of Multiple Deprivation (IMD).
+
+Format: Tabular data (CSV) coupled with spatial boundaries.
+
+Description: The IMD evaluates relative deprivation across neighborhoods by combining various domains such as income, employment, education, and health into a single score. In this project, it represents the social vulnerability and resilience capacity of the populations residing within the study area.
+
+### Data Integration Strategy
+ &nbsp;&nbsp;&nbsp;&nbsp; The Uber H3 Discrete Global Grid System (DGGS) will be used to harmonize these datasets because they have essentially different formats (tabular data for social indices and spatial polygons for floods). The IMD deprivation scores and the flood risk percentages will be combined into homogeneous H3 hexagonal cells (e.g., Resolution 8) to produce a standardized, clean dataset that is prepared for machine learning algorithms.
+
+## Description of the Baseline Method:
+&nbsp;&nbsp;&nbsp;&nbsp;  In this term project, K-Means Clustering is selected as the baseline machine learning method. K-Means is a highly efficient, unsupervised learning algorithm that partitions data into distinct clusters based on feature similarity. The integrated dataset, structured within the H3 hexagonal grid system, contains both physical flood hazard probabilities and socio-economic deprivation (IMD) scores. This data will be fed into the K-Means algorithm to group the spatial units (hexagons) into fundamental categories, such as Low, Moderate, and High-Risk clusters.
+ &nbsp;&nbsp;&nbsp;&nbsp; At this baseline stage, the clustering relies on the statistical attributes of the data rather than their geographical proximity or spatial density. The reason for establishing this K-Means as a baseline is:
+•	It provides a fundamental understanding of the statistical correlations between flood exposure and social vulnerability.
+•	it serves as a performance benchmark.
+ &nbsp;&nbsp;&nbsp;&nbsp; In the subsequent phases of the project, this attribute-based baseline will be compared against advanced spatial algorithms, specifically DBSCAN (Density-Based Spatial Clustering of Applications with Noise). This comparison will demonstrate the added value of incorporating spatial neighborhood dynamics and density into identifying critical vulnerability hotspots.
+
+# Literature Review
+## 1.	'Bunkering down': How one community is tightening social-ecological network structures in the face of global change.
+**DOI:** [10.1002/pan3.10364](https://doi.org/10.1002/pan3.10364)
+
+### Relevance to the Term Project
+ &nbsp;&nbsp;&nbsp;&nbsp; This article provides the sociological foundation for the term project. It proves that vulnerable communities facing environmental risks naturally form isolated clusters ("bunkering down"), justifying the use of spatial clustering algorithms (K-Means and DBSCAN) to identify vulnerability hotspots.
+#### Subject
+&nbsp;&nbsp;&nbsp;&nbsp;The temporal evolution of social-ecological networks in a vulnerable community facing escalating environmental changes.
+### Inputs
+&nbsp;&nbsp;&nbsp;&nbsp;Household communication surveys, trophic fish interactions, and socio-demographic attributes (e.g., clan, wealth).
+### Method
+&nbsp;&nbsp;&nbsp;&nbsp;Dynamic network modeling using temporal and cross-sectional exponential random graph models (TERGM & ERGM).
+### Outputs
+&nbsp;&nbsp;&nbsp;&nbsp;  Faced with risks, the community "bunkers down," forming tight-knit, isolated social clusters (homophily) and relying on traditional leaders rather than seeking diverse external support.
+### Data Sources & Resolutions
+ &nbsp;&nbsp;&nbsp;&nbsp; The study draws on primary quantitative and qualitative data collected over a 16-year period (2002, 2009, 2012, 2016, and 2018). Contextual baseline data includes benthic community surveys (to track coral vs. macroalgae cover) and systematically sampled household surveys tracking population and expenditures. The specific network data was collected via structured in-person interviews (surveys) in 2016 and 2018. The resolution of the data is at the household level for the social network, the species level for the ecological network, and the individual gear-to-species level for social-ecological links
+### Models / Software Used
+&nbsp;&nbsp;&nbsp;&nbsp;  The researchers used the MPNet software to implement the TERGM and ERGM procedures, obtain parameter estimates, and evaluate the Goodness of Fit for the modeled networks.
+
+## 2.	Discrete Global Grid Systems as scalable geospatial frameworks for characterizing coastal environments
+**DOI:** [10.1016/j.envsoft.2021.105210](https://doi.org/10.1016/j.envsoft.2021.105210)
+
+### Relevance to the Term Project
+ &nbsp;&nbsp;&nbsp;&nbsp; Fulfills the project requirement to investigate DGGS/H3. It justifies our use of H3 to seamlessly harmonize disparate datasets (flood polygons and tabular socio-economic data) and proves H3's high performance in spatial neighborhood identification, which is mathematically essential for our distance and density-based algorithms (K-Means and DBSCAN).
+### Subject
+  &nbsp;&nbsp;&nbsp;&nbsp;Exploring hexagon-based DGGS (specifically H3 and dggridR) as scalable frameworks to aggregate and integrate diverse coastal data across the land-sea interface.
+### Inputs
+ &nbsp;&nbsp;&nbsp;&nbsp; Point (water temperatures), line (shorelines), and grid (sea surface temperatures) datasets from Tampa Bay, FL, alongside existing spatial boundaries (e.g., NHDPlus, HUC-08).
+### Method
+&nbsp;&nbsp;&nbsp;&nbsp;  Comparing H3 and dggridR by matching hexagon areas to existing spatial frameworks, aggregating multi-format datasets into hex units, and testing networking and interpolation capabilities.
+### Outputs
+  &nbsp;&nbsp;&nbsp;&nbsp;Both systems are effective. While dggridR offers flexible scaling, H3 is significantly more performant and computationally efficient for spatial indexing, identifying neighbors, and scaling data without relying on external flow tables.
+### Data Sources & Resolutions
+ &nbsp;&nbsp;&nbsp;&nbsp; The study focused on the Tampa Bay estuary. Water Quality Portal point data consisted of water temperature results collected between 1995 and 2020. Gridded data was derived from 1-km resolution daily sea surface temperature satellite datasets. Existing spatial framework benchmarks varied in resolution: local NHDPlus catchments (~2.0-2.9 km²), sub-estuary ATTAINS waterbodies (~22 km²), estuary WBD HUC-08 units (~1800 km²), and 30x30-meter elevation grid cells.
+### Models / Software Used
+&nbsp;&nbsp;&nbsp;&nbsp;  The researchers used the H3 python library (v3.6.4) and the dggridR R package (v2.0.4), which implements the DGGRID software (v6.2b). Data gathering, pre-processing, and demonstration analyses were run using automated Python scripts within Jupyter Notebooks.
+
+## 3.	Flood susceptibility modelling using advanced ensemble machine learning models
+**DOI:** [10.1016/j.gsf.2020.09.006](https://doi.org/10.1016/j.gsf.2020.09.006)
+
+### Relevance to the Term Project
+&nbsp;&nbsp;&nbsp;&nbsp;  Provides crucial empirical justification for our algorithmic progression. It proves that analyzing complex spatial flood hazards requires advanced machine learning techniques, perfectly justifying our transition from a simple baseline model (K-Means) to a sophisticated, density-based advanced algorithm (DBSCAN).
+### Subject
+  &nbsp;&nbsp;&nbsp;&nbsp;Evaluating advanced hybrid ensemble ML models (e.g., Dagging, Random Subspace) for high-performance flood susceptibility mapping in the Teesta River basin, Bangladesh.
+### Inputs
+ &nbsp;&nbsp;&nbsp;&nbsp; The study utilized twelve flood influencing factors: elevation, curvature, aspect, slope, topographic roughness index (TRI), topographic wetness index (TWI), stream power index (SPI), sediment transport index (STI), land use/land cover (LULC), distance to river, soil type, and rainfall. Also, 413 historical/current flooding points.
+### Method
+  &nbsp;&nbsp;&nbsp;&nbsp;Assessing factor relationships via InGR and multicollinearity tests, followed by modeling flood susceptibility using 5 ML approaches (ANN, SVM, RF, RS, and Dagging). Models were validated using ROC/AUC, RMSE, and non-parametric statistical tests.
+### Outputs
+  &nbsp;&nbsp;&nbsp;&nbsp;The proposed Dagging ensemble model significantly outperformed others (AUC 0.873). LULC, distance to river, elevation, and slope were the most significant drivers, classifying 29.62% of the total area as extremely vulnerable.
+### Data Sources & Resolutions
+ &nbsp;&nbsp;&nbsp;&nbsp; All spatial influencing factors were transformed into raster format with a 30m spatial resolution. Topographical variables were derived from ASTER GDEM (Version 2, 30m resolution). LULC maps were created using Landsat and Operational Land Imager (OLI) imagery (30m resolution). Soil data was sourced from the USDA NRCS soil taxonomy map. Rainfall data came from the Bangladesh Meteorological Department and was interpolated using Kriging. Drainage networks and distance to rivers were derived from topographic maps at a 1:250,000 scale provided by the Bangladesh Water Development Board and Google Earth.
+### Models / Software Used
+ &nbsp;&nbsp;&nbsp;&nbsp; WEKA package (version 3.9.3): Used to execute the machine learning models (ANN, SVM, RF, RS, and Dagging). ArcGIS 10.2 / 10.5: Utilized for handling spatial datasets, deriving topographical factors, and final mapping. ENVI software (version 5.3): Used to classify the LULC map with an artificial neural network.
+
+# DGGS (H3) Investigation
+  &nbsp;&nbsp;&nbsp;&nbsp;The Uber H3 Discrete Global Grid System (DGGS) is used as the fundamental spatial framework for this study in compliance with the project guidelines. 
+  
+ &nbsp;&nbsp;&nbsp;&nbsp;The flood hazard data consists of complex spatial polygons (representing physical inundation boundaries), while the Index of Multiple Deprivation (IMD) is primarily tabular socio-economic data linked to census tracts. By implementing H3 hexagonal grids (e.g., at Resolution 8), these fundamentally disparate geospatial data types are harmonized into uniform spatial units. Each hexagon acts as a unified data bin that calculates and stores both the percentage of flood risk coverage and the relative social deprivation score within its boundaries.
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;Furthermore, the geometric properties of H3 hexagons provide a significant analytical advantage over traditional square grids. Hexagons possess equidistant centroids and uniform neighboring distances. This characteristic is important for the spatial data mining phase of this project, as it significantly enhances the accuracy, neighbor-identification performance, and reliability of distance-based and density-based clustering algorithms, specifically K-Means and DBSCAN.
+
+  # Preliminary Results
+&nbsp;&nbsp;&nbsp;&nbsp;The initial phase of the project involved importing and preprocessing the spatial datasets within a Python environment using Google Colab. The UK LSOA boundary data was processed utilizing the geopandas and h3 libraries to generate the foundational Discrete Global Grid System (DGGS) at Resolution 8. During the H3 hex-binning process, several invalid geometries and topological errors were detected within the clipped boundary data. Instead of algorithmic failure, a try-except validation pipeline was implemented to isolate and skip these corrupted multi-polygons, ensuring a robust and clean H3 spatial grid for further analysis.
+
+&nbsp;&nbsp;&nbsp;&nbsp;Following the generation of the grid, the H3 hexagons were exported and visualized in QGIS. The preliminary maps below (FIG.1) demonstrate the overlay of the transparent H3 grid with the physical flood hazard polygons (RoFRS). The baseline (K-Means) clustering phase is made possible by this visual output, which validates the spatial data integration for the term project.
+
