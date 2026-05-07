@@ -25,10 +25,11 @@ Water Resources Division <br>
 
   
   
-# Introduction 
+<h1 align="center">Introduction</h1>
  &nbsp;&nbsp;&nbsp;&nbsp; In the UK, extreme weather events—especially flooding—have become much more frequent and severe due to climate change. However, the effects of these environmental risks are intricately linked to social injustices rather than being solely a physical or infrastructure issue. Communities that are socially vulnerable and impoverished frequently live in high-risk flood zones and typically lack the social and economic resources needed for quick recovery and resilience. This term project's main goal is to identify and examine the spatial connections between social deprivation and flood hazards. This study attempts to map these overlapping risks using open-source data from the UK Environment Agency (flood risk areas) and the UK Government's Index of Multiple Deprivation (IMD).
 ## Study Area
  &nbsp;&nbsp;&nbsp;&nbsp; This term project's geographical focus includes the Thames River Basin in the United Kingdom and the Greater London area. Because of its unique combination of complex riverine and coastal flood exposure along with a variety of socioeconomic neighborhood profiles, this area was chosen as the spatial bounding box (Extent: X: 499000 to 585000, Y: 138000 to 191000 in EPSG:27700, British National Grid). 
+ 
 ## Dataset Introduction
  To achieve the objectives of this spatial data mining project, two distinct and open-source datasets from the United Kingdom are utilized. These datasets provide the foundational physical and socio-economic variables required for the clustering analysis.
 
@@ -60,7 +61,8 @@ Description: The IMD evaluates relative deprivation across neighborhoods by comb
 •	it serves as a performance benchmark.
  &nbsp;&nbsp;&nbsp;&nbsp; In the subsequent phases of the project, this attribute-based baseline will be compared against advanced spatial algorithms, specifically DBSCAN (Density-Based Spatial Clustering of Applications with Noise). This comparison will demonstrate the added value of incorporating spatial neighborhood dynamics and density into identifying critical vulnerability hotspots.
 
-# Literature Review
+<h1 align="center">Literature Review</h1>
+
 ## 1.	'Bunkering down': How one community is tightening social-ecological network structures in the face of global change.
 **DOI:** [10.1002/pan3.10364](https://doi.org/10.1002/pan3.10364)
 
@@ -115,14 +117,16 @@ Description: The IMD evaluates relative deprivation across neighborhoods by comb
 ### Models / Software Used
  &nbsp;&nbsp;&nbsp;&nbsp; WEKA package (version 3.9.3): Used to execute the machine learning models (ANN, SVM, RF, RS, and Dagging). ArcGIS 10.2 / 10.5: Utilized for handling spatial datasets, deriving topographical factors, and final mapping. ENVI software (version 5.3): Used to classify the LULC map with an artificial neural network.
 
-# DGGS (H3) Investigation
+<h1 align="center">DGGS (H3) Investigation</h1>
+
   &nbsp;&nbsp;&nbsp;&nbsp;The Uber H3 Discrete Global Grid System (DGGS) is used as the fundamental spatial framework for this study in compliance with the project guidelines. 
   
  &nbsp;&nbsp;&nbsp;&nbsp;The flood hazard data consists of complex spatial polygons (representing physical inundation boundaries), while the Index of Multiple Deprivation (IMD) is primarily tabular socio-economic data linked to census tracts. By implementing H3 hexagonal grids (e.g., at Resolution 8), these fundamentally disparate geospatial data types are harmonized into uniform spatial units. Each hexagon acts as a unified data bin that calculates and stores both the percentage of flood risk coverage and the relative social deprivation score within its boundaries.
   
   &nbsp;&nbsp;&nbsp;&nbsp;Furthermore, the geometric properties of H3 hexagons provide a significant analytical advantage over traditional square grids. Hexagons possess equidistant centroids and uniform neighboring distances. This characteristic is important for the spatial data mining phase of this project, as it significantly enhances the accuracy, neighbor-identification performance, and reliability of distance-based and density-based clustering algorithms, specifically K-Means and DBSCAN.
 
-  # Preliminary Results
+<h1 align="center">Preliminary Results</h1>
+
 &nbsp;&nbsp;&nbsp;&nbsp;The initial phase of the project involved importing and preprocessing the spatial datasets within a Python environment using Google Colab. The UK LSOA boundary data was processed utilizing the geopandas and h3 libraries to generate the foundational Discrete Global Grid System (DGGS) at Resolution 8. During the H3 hex-binning process, several invalid geometries and topological errors were detected within the clipped boundary data. Instead of algorithmic failure, a try-except validation pipeline was implemented to isolate and skip these corrupted multi-polygons, ensuring a robust and clean H3 spatial grid for further analysis.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Following the generation of the grid, the H3 hexagons were exported and visualized in QGIS. The preliminary maps below (FIG.1) demonstrate the overlay of the transparent H3 grid with the physical flood hazard polygons (RoFRS). The baseline (K-Means) clustering phase is made possible by this visual output, which validates the spatial data integration for the term project.
