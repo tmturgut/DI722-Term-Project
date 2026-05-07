@@ -6,7 +6,7 @@
 
 <br>
 
-## Spatio-Temporal Analysis of Flood Risk and Social Vulnerability using H3 Grids and DBSCAN in UK
+## Spatio-Temporal Analysis of Flood Risk and Social Vulnerability <br> using H3 Grids and DBSCAN in UK
 
 <br>
 
@@ -131,3 +131,12 @@ Description: The IMD evaluates relative deprivation across neighborhoods by comb
 
 &nbsp;&nbsp;&nbsp;&nbsp;Following the generation of the grid, the H3 hexagons were exported and visualized in QGIS. The preliminary maps below (FIG.1) demonstrate the overlay of the transparent H3 grid with the physical flood hazard polygons (RoFRS). The baseline (K-Means) clustering phase is made possible by this visual output, which validates the spatial data integration for the term project.
 
+<div align="center">
+
+<img width="1430" height="623" alt="Fig1_Preliminary Result" src="https://github.com/user-attachments/assets/dfe132e6-9f23-47ad-8439-6167068e5e49" />
+
+<br>
+
+<i><b>Fig. 1:</b> Spatial integration of complex flood extent polygons within the scalable H3 Discrete Global Grid System (DGGS) framework.</i>
+
+</div>
