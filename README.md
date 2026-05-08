@@ -35,6 +35,11 @@ Water Resources Division <br>
 ## Dataset Introduction
  To achieve the objectives of this spatial data mining project, two distinct and open-source datasets from the United Kingdom are utilized. These datasets provide the foundational physical and socio-economic variables required for the clustering analysis.
 
+ ###  Data Availability
+Due to GitHub's file size limitations, the generated spatial databases (.gpkg) containing the H3 DGGS polygons and K-Means baseline results are hosted externally. You can access and download the raw project data via the link below:
+* Download Spatial Datasets (Google Drive) https://drive.google.com/drive/folders/1IG0fhf6xswQtRZa08rku30DNGrf6z_oa?usp=drive_link
+
+
 ### 1. Flood Hazard Data (Physical Dimension)
 Source: UK Environment Agency (EA) Open Data portal.
 
