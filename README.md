@@ -154,7 +154,7 @@ Two critical features were engineered for each hexagonal cell using spatial join
 1. **Flood Percentage:** The area ratio of the UK Environment Agency's flood risk polygons (`rofrs_4band`) intersecting with the cell.
 2. **Social Deprivation Score:** The Index of Multiple Deprivation (IMD) score extracted from the underlying LSOA boundaries.
 
-The K-Means algorithm (`k=3`) was then applied to these two features, mathematically categorizing the geographic space into three distinct risk clusters: Low Risk (0), Medium Risk (1), and High Risk (2), without providing any prior geographic coordinate information to the machine.
+The K-Means algorithm (`k=3`) was then applied to these two features, mathematically categorizing the geographic space into three distinct risk clusters: **Medium Risk (0), High Risk (1), and Low Risk (2)**, without providing any prior geographic coordinate information to the machine.
 
 ---
 
@@ -166,7 +166,7 @@ The K-Means algorithm (`k=3`) was then applied to these two features, mathematic
 
 <br>
 
-<i><b>Fig. 2:</b> Spatial distribution of K-Means baseline clustering (Green: Low Risk, Yellow: Medium Risk, Red: High Risk) overlaid with actual flood extent polygons (blue) within the scalable H3 DGGS framework.</i>
+<i><b>Fig. 2:</b> Spatial distribution of K-Means baseline clustering (Green: Low Risk [Cluster 2], Yellow: Medium Risk [Cluster 0], Red: High Risk [Cluster 1]) overlaid with actual flood extent polygons (blue) within the scalable H3 DGGS framework.</i>
 
 </div>
 
