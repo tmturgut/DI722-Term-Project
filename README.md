@@ -1,3 +1,4 @@
+
 <div align="center">
 
 # MIDDLE EAST TECHNICAL UNIVERSITY
@@ -162,8 +163,7 @@ The K-Means algorithm (`k=3`) was then applied to these two features, mathematic
 
 <div align="center">
 
-<img width="923" height="462" alt="Screenshot 2026-05-08 at 02 31 56" src="https://github.com/user-attachments/assets/6af6e005-3c23-4a55-b11f-8509d482e253" />
-
+<img width="966" height="429" alt="Fig2_BaselineMethodResult" src="https://github.com/user-attachments/assets/c09dbc3b-f986-4cc8-b34a-5807a04b185a" />
 <br>
 
 <i><b>Fig. 2:</b> Spatial distribution of K-Means baseline clustering (Green: Low Risk [Cluster 2], Yellow: Medium Risk [Cluster 0], Red: High Risk [Cluster 1]) overlaid with actual flood extent polygons (blue) within the scalable H3 DGGS framework.</i>
