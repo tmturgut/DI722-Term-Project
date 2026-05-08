@@ -172,6 +172,6 @@ The K-Means algorithm (`k=3`) was then applied to these two features, mathematic
 
 <h1 align="center">Analysis of the Baseline Output</h1>
 
-&nbsp;&nbsp;&nbsp;&nbsp;The generated heatmap demonstrates a consistent spatio-temporal pattern. As visually verified in **Fig. 2**, the 'High Risk' clusters (represented by red hexagons) strongly coincide with the physical distribution of river and sea flooding areas (blue polygons). Furthermore, the transition zones (yellow hexagons) buffer these critical areas. This initial outcome demonstrates that the baseline machine learning model effectively captures the intricate relationship between socioeconomic deprivation and physical flood hazards.
+&nbsp;&nbsp;&nbsp;&nbsp;The generated heatmap demonstrates a consistent spatio-temporal pattern. As visually verified in **Fig. 2**, the 'High Risk' clusters (**Cluster 1**, represented by red hexagons) strongly coincide with the physical distribution of river and sea flooding areas (blue polygons). Furthermore, the transition zones (**Cluster 0**, represented by yellow hexagons) buffer these critical areas. This initial outcome demonstrates that the baseline machine learning model effectively captures the intricate relationship between socioeconomic deprivation and physical flood hazards.
 
 
