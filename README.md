@@ -220,3 +220,15 @@ In addition to the spatial distribution, a detailed statistical evaluation was c
 
 &nbsp;&nbsp;&nbsp;&nbsp;The combo chart visually confirms the intersection of the two primary threat metrics. The yellow/green/red columns represent the average flood risk (%), while the black trend line tracks the average Index of Multiple Deprivation (IMD) score. It clearly demonstrates that Cluster 1 (Red) peaks in both physical inundation probability and social disadvantage, mapping the areas with the lowest resilience capacity.
 
+<div align="center">
+
+<img width="2662" height="2222" alt="Figure_4" src="https://github.com/user-attachments/assets/99ea75fd-f8eb-47ee-a481-2aa885bb1197" />
+
+<br>
+
+<i><b>Fig. 6:</b>K-Means Cluster Distribution: Flooding vs. Social Deprivation.</i>
+
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;This scatter plot, obtained with our baseline model K-Means, clearly demonstrates the algorithm's vulnerability to feature scaling issues. It forms rigid, horizontal boundaries primarily driven by the Social Deprivation (IMD Score) axis, failing to meaningfully integrate the spatial realities of Flood Risk. For instance, cells with near 100% flood risk are misclassified into lower risk clusters simply because their IMD scores fall below the algorithm's mathematical threshold. Furthermore, K-Means forces every data point into a cluster without identifying spatial noise. This statistically rigid and spatially blind nature of K-Means scientifically justifies our transition to a density-based 'Advanced Method' like DBSCAN to capture true, multidimensional geographic hotspots.
+
