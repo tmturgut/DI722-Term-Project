@@ -218,5 +218,5 @@ In addition to the spatial distribution, a detailed statistical evaluation was c
 
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;The combo chart visually confirms the intersection of the two primary threat metrics. The blue columns represent the average flood risk (%), while the black trend line tracks the average Index of Multiple Deprivation (IMD) score. It clearly demonstrates that Cluster 1 (Red) peaks in both physical inundation probability and social disadvantage, mapping the areas with the lowest resilience capacity.
+&nbsp;&nbsp;&nbsp;&nbsp;The combo chart visually confirms the intersection of the two primary threat metrics. The yellow/green/red columns represent the average flood risk (%), while the black trend line tracks the average Index of Multiple Deprivation (IMD) score. It clearly demonstrates that Cluster 1 (Red) peaks in both physical inundation probability and social disadvantage, mapping the areas with the lowest resilience capacity.
 
