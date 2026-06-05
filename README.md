@@ -3,7 +3,7 @@
 
 # MIDDLE EAST TECHNICAL UNIVERSITY
 ### DI722 - Spatio-Temporal Data Mining
-#### Project Proposal Presentation
+#### Final Project Presentation
 
 <br>
 
