@@ -221,7 +221,7 @@ In addition to the spatial distribution, a detailed statistical evaluation was c
 
 <div align="center">
 
-<img width="2662" height="2222" alt="Figure_4" src="https://github.com/user-attachments/assets/99ea75fd-f8eb-47ee-a481-2aa885bb1197" />
+<img width="2662" height="2222" alt="Figure_4" src="https://github.com/user-attachments/assets/bccf9fee-aeba-4f5c-9883-b9a255b3cf16" />
 
 <br>
 
@@ -230,4 +230,5 @@ In addition to the spatial distribution, a detailed statistical evaluation was c
 </div>
 
 &nbsp;&nbsp;&nbsp;&nbsp;This scatter plot, obtained with our baseline model K-Means, clearly demonstrates the algorithm's vulnerability to feature scaling issues. It forms rigid, horizontal boundaries primarily driven by the Social Deprivation (IMD Score) axis, failing to meaningfully integrate the spatial realities of Flood Risk. For instance, cells with near 100% flood risk are misclassified into lower risk clusters simply because their IMD scores fall below the algorithm's mathematical threshold. Furthermore, K-Means forces every data point into a cluster without identifying spatial noise. This statistically rigid and spatially blind nature of K-Means scientifically justifies our transition to a density-based 'Advanced Method' like DBSCAN to capture true, multidimensional geographic hotspots.
+
 
