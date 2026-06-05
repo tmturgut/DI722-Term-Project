@@ -208,5 +208,15 @@ In addition to the spatial distribution, a detailed statistical evaluation was c
 
 &nbsp;&nbsp;&nbsp;&nbsp;The pie chart illustrates the areal distribution of the identified risk zones across the study area. Notably, 13% of the region is classified under the most critical threat level (Cluster 1), indicating the proportion of the area where severe physical flood hazards intersect with acute socioeconomic vulnerability.
 
+<div align="center">
 
+<img width="2772" height="2241" alt="Figure_3" src="https://github.com/user-attachments/assets/0c171916-1f76-4b82-93db-beae342a0c35" />
+
+<br>
+
+<i><b>Fig. 5:</b>Average Flood Risk and Social Deprivation Levels by Cluster.</i>
+
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;The combo chart visually confirms the intersection of the two primary threat metrics. The blue columns represent the average flood risk (%), while the black trend line tracks the average Index of Multiple Deprivation (IMD) score. It clearly demonstrates that Cluster 1 (Red) peaks in both physical inundation probability and social disadvantage, mapping the areas with the lowest resilience capacity.
 
