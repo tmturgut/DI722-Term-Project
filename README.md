@@ -255,37 +255,37 @@ In addition to the spatial distribution, a detailed statistical evaluation was c
 **DOI:** [10.1002/pan3.10364](https://doi.org/10.1002/pan3.10364) (bu kısım dogru sekilde degistirilecek)
 
 ### Relevance to the Term Project
-&nbsp;&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&nbsp;&nbsp; literatur taramam sonucu bulacagim 4.makale ile bu basligi dolduracagim.
 #### Subject
-&nbsp;&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&nbsp;&nbsp; literatur taramam sonucu bulacagim 4.makale ile bu basligi dolduracagim.
 ### Inputs
-&nbsp;&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&nbsp;&nbsp; literatur taramam sonucu bulacagim 4.makale ile bu basligi dolduracagim.
 ### Method
-&nbsp;&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&nbsp;&nbsp; literatur taramam sonucu bulacagim 4.makale ile bu basligi dolduracagim.
 ### Outputs
-&nbsp;&nbsp;&nbsp;&nbsp; ...
+&nbsp;&nbsp;&nbsp;&nbsp; literatur taramam sonucu bulacagim 4.makale ile bu basligi dolduracagim.
 ### Data Sources & Resolutions
-&nbsp;&nbsp;&nbsp;&nbsp; ...
+&nbsp;&nbsp;&nbsp;&nbsp; literatur taramam sonucu bulacagim 4.makale ile bu basligi dolduracagim.
 ### Models / Software Used
-&nbsp;&nbsp;&nbsp;&nbsp; ...
+&nbsp;&nbsp;&nbsp;&nbsp; literatur taramam sonucu bulacagim 4.makale ile bu basligi dolduracagim.
 
 ## 5.	...
 **DOI:** [10.1016/j.envsoft.2021.105210](https://doi.org/10.1016/j.envsoft.2021.105210) (bu kısım dogru sekilde degistirilecek)
 
 ### Relevance to the Term Project
-&nbsp;&nbsp;&nbsp;&nbsp; ...
+&nbsp;&nbsp;&nbsp;&nbsp; literatur taramam sonucu bulacagim 5.makale ile bu basligi dolduracagim.
 ### Subject
-&nbsp;&nbsp;&nbsp;&nbsp; ...
+&nbsp;&nbsp;&nbsp;&nbsp; literatur taramam sonucu bulacagim 5.makale ile bu basligi dolduracagim.
 ### Inputs
-&nbsp;&nbsp;&nbsp;&nbsp; ...
+&nbsp;&nbsp;&nbsp;&nbsp; literatur taramam sonucu bulacagim 5.makale ile bu basligi dolduracagim.
 ### Method
-&nbsp;&nbsp;&nbsp;&nbsp; ...
+&nbsp;&nbsp;&nbsp;&nbsp; literatur taramam sonucu bulacagim 5.makale ile bu basligi dolduracagim.
 ### Outputs
-&nbsp;&nbsp;&nbsp;&nbsp; ...
+&nbsp;&nbsp;&nbsp;&nbsp; literatur taramam sonucu bulacagim 5.makale ile bu basligi dolduracagim.
 ### Data Sources & Resolutions
-&nbsp;&nbsp;&nbsp;&nbsp; ...
+&nbsp;&nbsp;&nbsp;&nbsp; literatur taramam sonucu bulacagim 5.makale ile bu basligi dolduracagim.
 ### Models / Software Used
-&nbsp;&nbsp;&nbsp;&nbsp; ...
+&nbsp;&nbsp;&nbsp;&nbsp; literatur taramam sonucu bulacagim 5.makale ile bu basligi dolduracagim.
 
 </div>
 
@@ -386,7 +386,7 @@ Building upon the initial exploratory findings, a comprehensive statistical and 
 
 &nbsp;&nbsp;&nbsp;&nbsp;As presented in Fig. 12, the scatter plot visually confirms the exceptional precision of the density-based clustering algorithm. Unlike the baseline K-Means method (see Fig. 6), which generated broad, overlapping horizontal bands of risk without considering geographic reality, DBSCAN intelligently condenses the grid cells into mathematically robust spatial clusters. By plotting the localized averages, the algorithm distinctly isolates specific anomalies—such as the "Flooded but Wealthy" cluster (Cluster 11) located in the extreme bottom-right quadrant (representing extreme flood risk but very low social deprivation)—and successfully separates isolated "Spatial Noise". Furthermore, the "True Hotspots" (Red Alert zones) are explicitly identified as isolated spatial pockets rather than a widespread continuous phenomenon. This distribution explicitly demonstrates the advanced algorithm's ability to filter out noise and provide precise, targeted intelligence for disaster mitigation strategies.
 
-<h1 align="center">Conclusion: Baseline vs. Advanced Performance Comparison</h1>
+<h1 align="center">Conclusion: Baseline (K-MEAN) vs. Advanced (DBSCAN) Performance Comparison</h1>
 
-&nbsp;&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&nbsp;&nbsp; karsilastirma calismlarim yer alacak.
 
