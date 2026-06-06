@@ -252,7 +252,7 @@ In addition to the spatial distribution, a detailed statistical evaluation was c
 <h1 align="center">Additional Literature Review</h1>
 
 ## 4. Urban flood risk assessment based on DBSCAN and K-means clustering algorithm
-**DOI:**   https://www.google.com/url?sa=E&q=https%3A%2F%2Fdoi.org%2F10.1080%2F19475705.2023.2250527
+**DOI:** [10.1080/19475705.2023.2250527](https://doi.org/10.1080/19475705.2023.2250527)
 
 ### Relevance to the Term Project
 &nbsp;&nbsp;&nbsp;&nbsp; This article directly supports the methodological core of the term project. By systematically integrating DBSCAN and K-Means algorithms for urban flood risk assessment, it provides robust academic validation for our decision to use K-Means as an exploratory baseline and DBSCAN as an advanced method to filter spatial noise and precisely identify socio-environmental vulnerability hotspots.
