@@ -7,7 +7,7 @@
 
 <br>
 
-## Spatio-Temporal Analysis of Flood Risk and Social Vulnerability <br> using H3 Grids and DBSCAN in UK <br> Comparring with K-MEAN Method
+## Spatio-Temporal Analysis of Flood Risk and Social Vulnerability <br> using H3 Grids and DBSCAN in UK <br> Comparing with K-MEAN Method
 
 <br>
 
