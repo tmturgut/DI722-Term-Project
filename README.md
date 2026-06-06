@@ -388,5 +388,5 @@ Building upon the initial exploratory findings, a comprehensive statistical and 
 
 <h1 align="center">Conclusion: Baseline (K-MEAN) vs. Advanced (DBSCAN) Performance Comparison</h1>
 
-&nbsp;&nbsp;&nbsp;&nbsp; karsilastirma calismlarim yer alacak.
+&nbsp;&nbsp;&nbsp;&nbsp; karsilastirma calismlarim yer alacak...
 
