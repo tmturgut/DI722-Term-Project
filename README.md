@@ -175,21 +175,18 @@ The K-Means algorithm (`k=3`) was then applied to these two features, mathematic
 
 <i><b>Fig. 2:</b> Spatial distribution of K-Means baseline clustering (Green: Low Risk [Cluster 2], Yellow: Medium Risk [Cluster 0], Red: High Risk [Cluster 1]) overlaid with actual flood extent polygons (blue) within the scalable H3 DGGS framework.</i>
 
-Technical Note: Spatial Gaps and H3 Tessellation Dynamics
-Visual inspections of the generated H3 grid (as seen in the mapping outputs) reveal several un-tessellated gaps (white spaces) within the UK terrestrial boundaries. These gaps are not processing errors; rather, they are the mathematically correct outcomes of integrating real-world census geometries with rigid Discrete Global Grid Systems (DGGS).
-A custom try-except validation pipeline combined with a .buffer(0) geometric correction was implemented in the Python generation script to handle these edge cases without terminating the global loop. The absence of hexagonal cells in specific regions can be attributed to three primary spatio-topological factors:
-Phenomenon
-Description
-Impact on H3 Generation
-Demographic Voids (LSOA Nature)
-LSOA boundaries are delineated strictly by population density. Large unpopulated physical features (e.g., the River Thames channel, broad lakes, national parks) lack demographic data and thus correspond to empty spaces in the raw spatial input.
-No underlying polygon exists to be tessellated, resulting in valid geographical gaps in the grid.
-Topological Slivers & Invalid Geometries
-The highly complex coastal and riverine boundaries of the UK contain microscopic self-intersections or sliver polygons. While .buffer(0) resolved most anomalies, extreme topological distortions violate the strict geometrical rules of the H3 polyfill algorithm.
-The algorithm safely identifies these as mathematically invalid and skips them (handled via the except: pass block) to prevent system crashes.
-Resolution Limits (Centroid Exclusion)
-At H3 Resolution 8, each hexagon covers approximately 0.73 km². If a multi-polygon feature (such as a narrow coastal strip or a thin infrastructure corridor) is too narrow to encompass the mathematical centroid of an H3 cell, it cannot be tessellated.
-Narrow/micro-polygons are filtered out automatically, ensuring that only statistically robust areas are processed for machine learning.
+#### Technical Note: Spatial Gaps and H3 Tessellation Dynamics
+
+Visual inspections of the generated H3 grid (as seen in the mapping outputs) reveal several un-tessellated gaps (white spaces) within the UK terrestrial boundaries. These gaps are not processing errors; rather, they are the mathematically correct outcomes of integrating real-world census geometries with rigid Discrete Global Grid Systems (DGGS). 
+
+A custom `try-except` validation pipeline combined with a `.buffer(0)` geometric correction was implemented in the Python generation script to handle these edge cases without terminating the global loop. The absence of hexagonal cells in specific regions can be attributed to three primary spatio-topological factors:
+
+| Phenomenon | Description | Impact on H3 Generation |
+| :--- | :--- | :--- |
+| **Demographic Voids (LSOA Nature)** | LSOA boundaries are delineated strictly by population density. Large unpopulated physical features (e.g., the River Thames channel, broad lakes, national parks) lack demographic data and thus correspond to empty spaces in the raw spatial input. | No underlying polygon exists to be tessellated, resulting in valid geographical gaps in the grid. |
+| **Topological Slivers & Invalid Geometries** | The highly complex coastal and riverine boundaries of the UK contain microscopic self-intersections or sliver polygons. While `.buffer(0)` resolved most anomalies, extreme topological distortions violate the strict geometrical rules of the H3 `polyfill` algorithm. | The algorithm safely identifies these as mathematically invalid and skips them (handled via the `except: pass` block) to prevent system crashes. |
+| **Resolution Limits (Centroid Exclusion)** | At H3 Resolution 8, each hexagon covers approximately 0.73 km². If a multi-polygon feature (such as a narrow coastal strip or a thin infrastructure corridor) is too narrow to encompass the mathematical centroid of an H3 cell, it cannot be tessellated. | Narrow/micro-polygons are filtered out automatically, ensuring that only statistically robust areas are processed for machine learning. |
+
 This rigorous filtering mechanism ensures that the downstream machine learning algorithms (K-Means and DBSCAN) are fed exclusively with mathematically sound and demographically valid spatial data, enhancing the overall reliability of the Spatio-Temporal Data Mining process.
 
 </div>
