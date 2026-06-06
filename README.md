@@ -176,7 +176,7 @@ The K-Means algorithm (`k=3`) was then applied to these two features, mathematic
 <i><b>Fig. 2:</b> Spatial distribution of K-Means baseline clustering (Green: Low Risk [Cluster 2], Yellow: Medium Risk [Cluster 0], Red: High Risk [Cluster 1]) overlaid with actual flood extent polygons (blue) within the scalable H3 DGGS framework.</i>
 
 <h1 align="center">Technical Note</h1>
-#### Spatial Gaps and H3 Tessellation Dynamics
+### Spatial Gaps and H3 Tessellation Dynamics
 
 Visual inspections of the generated H3 grid (as seen in the mapping outputs) reveal several un-tessellated gaps (white spaces) within the UK terrestrial boundaries. These gaps are not processing errors; rather, they are the mathematically correct outcomes of integrating real-world census geometries with rigid Discrete Global Grid Systems (DGGS). 
 
