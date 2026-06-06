@@ -251,23 +251,23 @@ In addition to the spatial distribution, a detailed statistical evaluation was c
 
 <h1 align="center">Additional Literature Review</h1>
 
-## 4. ...
+## 4. Urban flood risk assessment based on DBSCAN and K-means clustering algorithm
 **DOI:** [10.1002/pan3.10364](https://doi.org/10.1002/pan3.10364) (bu kısım dogru sekilde degistirilecek)
 
 ### Relevance to the Term Project
-&nbsp;&nbsp;&nbsp;&nbsp; literatur taramam sonucu bulacagim 4.makale ile bu basligi dolduracagim.
+&nbsp;&nbsp;&nbsp;&nbsp; This article directly supports the methodological core of the term project. By systematically integrating DBSCAN and K-Means algorithms for urban flood risk assessment, it provides robust academic validation for our decision to use K-Means as an exploratory baseline and DBSCAN as an advanced method to filter spatial noise and precisely identify socio-environmental vulnerability hotspots.
 #### Subject
-&nbsp;&nbsp;&nbsp;&nbsp; literatur taramam sonucu bulacagim 4.makale ile bu basligi dolduracagim.
+&nbsp;&nbsp;&nbsp;&nbsp; Developing an efficient urban flood risk assessment framework by combining subjective-objective weighting methods with density-based (DBSCAN) and partition-based (K-means) spatial clustering algorithms to classify risk levels in urban areas.
 ### Inputs
-&nbsp;&nbsp;&nbsp;&nbsp; literatur taramam sonucu bulacagim 4.makale ile bu basligi dolduracagim.
+&nbsp;&nbsp;&nbsp;&nbsp; A comprehensive set of 11 hazard and vulnerability indices: average annual precipitation (AP), heavy precipitation days (R50, R20), digital elevation model (DEM), slope (SL), river network density (RND), runoff coefficient (RC), population density (PD), GDP per unit area (GPUA), GDP per capita (GPC), and road network density (RD).
 ### Method
-&nbsp;&nbsp;&nbsp;&nbsp; literatur taramam sonucu bulacagim 4.makale ile bu basligi dolduracagim.
+&nbsp;&nbsp;&nbsp;&nbsp;  The study uses a combinatorial empowerment approach (AHP and entropy weight method) to determine index weights [cite: 814, 816, 818]. DBSCAN is then applied to extract potential high-risk outliers (spatial noise), followed by the improved K-means++ clustering algorithm (optimized using the elbow method) to classify the remaining spatial data into distinct flood risk levels.
 ### Outputs
-&nbsp;&nbsp;&nbsp;&nbsp; literatur taramam sonucu bulacagim 4.makale ile bu basligi dolduracagim.
+&nbsp;&nbsp;&nbsp;&nbsp; The hybrid clustering approach successfully classified the study area into five flood risk levels [cite: 831]. High-risk areas (3.79% of the total area) were found to be strongly associated with intense extreme rainfall, low elevation, gentle slopes, high runoff coefficients, and high population density [cite: 834, 835]. The integration of DBSCAN and K-Means proved superior to traditional TOPSIS methods and single K-Means by accurately pinpointing concentrated high-risk areas without underestimating localized hazardsm.
 ### Data Sources & Resolutions
-&nbsp;&nbsp;&nbsp;&nbsp; literatur taramam sonucu bulacagim 4.makale ile bu basligi dolduracagim.
+&nbsp;&nbsp;&nbsp;&nbsp; lThe study focused on the municipal district of Fuzhou City, China [cite: 804]. Precipitation data (2011-2020) was sourced from the local Meteorological Service Center [cite: 806]. Land cover data was obtained from GlobeLand30 (30m resolution), population density from WorldPop (2020), economic data from the Fuzhou Statistical Yearbook, and road networks from OpenStreetMap. The spatial resolution for the risk assessment was standardized to a 100m x 100m grid, dividing the study area into 167,015 grid units.
 ### Models / Software Used
-&nbsp;&nbsp;&nbsp;&nbsp; literatur taramam sonucu bulacagim 4.makale ile bu basligi dolduracagim.
+&nbsp;&nbsp;&nbsp;&nbsp; The researchers implemented the DBSCAN and K-means++ clustering algorithms. The Analytic Hierarchy Process (AHP) and Entropy weight models were used for statistical calculations.  ArcGIS was utilized for spatial analysis, grid division, and the visualization of the final flood risk maps.
 
 ## 5.	...
 **DOI:** [10.1016/j.envsoft.2021.105210](https://doi.org/10.1016/j.envsoft.2021.105210) (bu kısım dogru sekilde degistirilecek)
