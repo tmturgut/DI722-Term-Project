@@ -155,7 +155,7 @@ Description: The IMD evaluates relative deprivation across neighborhoods by comb
 </div>
 
 
-### Baseline Method Part
+### Baseline Method (K-MEAN) Results
 &nbsp;&nbsp;&nbsp;&nbsp; In accordance with the project guidelines, **K-Means Clustering** was selected as the baseline method to serve as a fundamental reference point for evaluating more advanced spatial data mining algorithms. To construct this model, the study area was tessellated into the H3 Discrete Global Grid System (DGGS) at Resolution 8. 
 
 Two critical features were engineered for each hexagonal cell using spatial join and overlay techniques:
@@ -231,4 +231,10 @@ In addition to the spatial distribution, a detailed statistical evaluation was c
 
 &nbsp;&nbsp;&nbsp;&nbsp;This scatter plot, obtained with our baseline model K-Means, clearly demonstrates the algorithm's vulnerability to feature scaling issues. It forms rigid, horizontal boundaries primarily driven by the Social Deprivation (IMD Score) axis, failing to meaningfully integrate the spatial realities of Flood Risk. For instance, cells with near 100% flood risk are misclassified into lower risk clusters simply because their IMD scores fall below the algorithm's mathematical threshold. Furthermore, K-Means forces every data point into a cluster without identifying spatial noise. This statistically rigid and spatially blind nature of K-Means scientifically justifies our transition to a density-based 'Advanced Method' like DBSCAN to capture true, multidimensional geographic hotspots.
 
+</div>
 
+<h1 align="center">Secondry Results</h1>
+
+### Advance Method (DBSCAN) Results
+
+&nbsp;&nbsp;&nbsp;&nbsp;
