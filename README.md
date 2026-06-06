@@ -193,7 +193,7 @@ The K-Means algorithm (`k=3`) was then applied to these two features, mathematic
 
 </div>
 
-<h1 align="center">Analysis of the Baseline Output</h1>
+<h1 align="center">Analysis of the Baseline Method (K-MEAN) Results</h1>
 
 
 ### Statistical Evaluation of the Baseline Model
@@ -331,6 +331,57 @@ To provide true spatial intelligence to the model, the dataset was enriched by e
 
 <div align="center">
 
+</div>
+
+<h1 align="center">Analysis of the Advance Method (DBSCAN) Results</h1>
+
+<div align="center">
+  
+<img width="1007" height="120" alt="Fig9" src="https://github.com/user-attachments/assets/3f040cb1-0c46-4221-8433-6b98a123374c" />
+
+<br>
+
+<i><b>Fig. 9:</b>Summary statistics of socio-environmental risk categories identified via DBSCAN spatial clustering.</i>
+
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;As detailed in Fig. 9, the advanced DBSCAN algorithm categorizes the H3 hexagonal grids into highly specific socio-environmental profiles based on spatial density. Unlike the baseline K-Means method, which broadly and inaccurately classified 28,378 cells as high-risk, DBSCAN precisely isolates the "True Hotspots" (Red Alert zones) to a highly concentrated spatial footprint of only 12 critical hexagons. Furthermore, the algorithm successfully identifies and filters out 839 geographically isolated cells as "Spatial Noise" (Label: -1), preventing potential resource misallocation. This statistical summary highlights the algorithm's advanced capability to differentiate between mere physical hazards (e.g., "Flooded but Wealthy" areas) and genuine multidimensional socio-environmental vulnerability.
+
+<div align="center">
+  
+<img width="3377" height="2172" alt="Fig10" src="https://github.com/user-attachments/assets/05697c19-2e22-48a8-b1f7-455a3ca4d28d" />
+
+<br>
+
+<i><b>Fig. 10:</b>Proportional distribution of spatio-temporal risk clusters and isolated noise identified by the DBSCAN algorithm..</i>
+
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;As depicted in Fig. 10, the DBSCAN algorithm drastically refines the risk proportions compared to the baseline K-Means model. While K-Means inaccurately classified 13% of the study area as high risk, the density-based DBSCAN model reveals that genuine "True Hotspots" (Red Alert zones) constitute a marginal fraction (0.01%) of the total area. Furthermore, it successfully filters out 0.38% of the cells as "Spatial Noise". This precise proportional distribution demonstrates the algorithm's capability to prevent the overestimation of risk and ensures that critical mitigation resources can be targeted exclusively toward mathematically robust, continuous hazard zones.
+
+<div align="center">
+  
+<img width="3428" height="2154" alt="Fig11" src="https://github.com/user-attachments/assets/79ebf092-1a54-4f2f-b018-1c533c3d135e" />
+
+<br>
+
+<i><b>Fig. 11:</b>Average flood risk and socio-economic deprivation (IMD) levels across DBSCAN spatial categories.</i>
+
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;As illustrated in Fig. 11, the combo chart visualizes the multidimensional nature of the identified spatial clusters. The algorithm effectively isolates the "Flooded but Wealthy" cluster (Cluster 11), which exhibits extreme physical vulnerability with an average flood risk of nearly 100%, yet possesses distinctively low social vulnerability (IMD: 7.43). Conversely, the "True Hotspots" category captures the areas experiencing simultaneous socio-environmental threats, marked by a significant flood risk (41.82%) coupled with severe social deprivation (IMD Score: 27.91). This nuanced distinction, which was completely obfuscated in the baseline K-Means model, proves the advanced algorithm's capability to differentiate between mere physical inundation and genuine socio-environmental vulnerability.
+
+<div align="center">
+  
+<img width="4675" height="2653" alt="Fig12" src="https://github.com/user-attachments/assets/18399ead-818f-4572-b8f8-09928fa2d9ad" />
+
+<br>
+
+<i><b>Fig. 12:</b>Scatter plot of DBSCAN spatial clusters illustrating the relationship between average flood risk and socio-economic deprivation (IMD).</i>
+
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;As presented in Fig. 12, the scatter plot visually confirms the exceptional precision of the density-based clustering algorithm. Unlike the baseline K-Means method (see Fig. 6), which generated broad, overlapping horizontal bands of risk without considering geographic reality, DBSCAN intelligently condenses the grid cells into mathematically robust spatial clusters. By plotting the localized averages, the algorithm distinctly isolates specific anomalies—such as the "Flooded but Wealthy" cluster (Cluster 11) located in the extreme bottom-right quadrant (representing extreme flood risk but very low social deprivation)—and successfully separates isolated "Spatial Noise". Furthermore, the "True Hotspots" (Red Alert zones) are explicitly identified as isolated spatial pockets rather than a widespread continuous phenomenon. This distribution explicitly demonstrates the advanced algorithm's ability to filter out noise and provide precise, targeted intelligence for disaster mitigation strategies.
 
 
 
