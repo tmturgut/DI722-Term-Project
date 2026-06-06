@@ -298,7 +298,8 @@ To provide true spatial intelligence to the model, the dataset was enriched by e
 
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&nbsp;&nbsp;As illustrated in Fig. 7, the DBSCAN algorithm successfully overcomes the spatial blindness of the baseline method. By evaluating geographical coordinates and spatial density, the algorithm filtered out isolated, non-cohesive cells as noise. Instead of broadly classifying thousands of cells as high-risk, it precisely isolated the true socio-environmental hotspots (Clusters 30 and 33), revealing the highly concentrated and geographically continuous areas of severe vulnerability.
+
 
 <div align="center">
 
@@ -310,7 +311,8 @@ To provide true spatial intelligence to the model, the dataset was enriched by e
 
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&nbsp;&nbsp;Fig. 8 demonstrates the real-world spatial validation of the advanced model. By overlaying the DBSCAN-detected hotspots (red) onto the UK Environment Agency's physical flood extent polygons (blue), a perfect spatial intersection is revealed. This proves that the algorithm accurately pinpointed the critical "Red Alert" zones where extreme physical inundation hazards directly coincide with areas of profound socio-economic deprivation, highlighting priority regions for emergency management and budget allocation.
+
 <div align="center">
 
 
