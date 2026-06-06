@@ -287,3 +287,32 @@ To provide true spatial intelligence to the model, the dataset was enriched by e
 &nbsp;&nbsp;&nbsp;&nbsp;To ensure equal mathematical weight during distance calculations and prevent features with larger numerical ranges from dominating the model, feature scaling (StandardScaler) was applied to the entire dataset.
 
 &nbsp;&nbsp;&nbsp;&nbsp;The DBSCAN algorithm was then executed with optimized parameters (ϵ = 0.3, MinPts = 5). Unlike K-Means, which forces every cell into a predefined cluster, DBSCAN successfully identified isolated, non-cohesive cells as spatial noise (Label: -1) and filtered them out. The algorithm detected 48 distinct, geographically continuous clusters across the study area. Through subsequent statistical evaluation of these clusters, specific groupings (Clusters 30 and 33) were pinpointed as the true socio-environmental "Red Alert" hotspots, representing the exact intersection of severe physical flood risk and critical social vulnerability.
+
+<div align="center">
+  
+<img width="1063" height="515" alt="Fig7" src="https://github.com/user-attachments/assets/b0f5b00d-513f-4ca1-91d6-58cb995ec010" />
+
+<br>
+
+<i><b>Fig. 7:</b>Spatial distribution of highly vulnerable socio-environmental hotspots identified by the advanced DBSCAN algorithm</i>
+
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;...
+
+<div align="center">
+
+<img width="1063" height="515" alt="Fig8" src="https://github.com/user-attachments/assets/e01da4a2-ec46-4245-8a0e-b769ba5916af" />
+
+<br>
+
+<i><b>Fig. 8:</b>Spatial intersection of DBSCAN-detected vulnerability hotspots (red) with physical river and sea flood extent polygons (blue)</i>
+
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;...
+<div align="center">
+
+
+
+
