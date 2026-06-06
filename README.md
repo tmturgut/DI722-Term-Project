@@ -294,9 +294,9 @@ In addition to the spatial distribution, a detailed statistical evaluation was c
 
 </div>
 
-<h1 align="center">Secondry Results</h1>
+<h1 align="center">Secondary Results</h1>
 
-### Advance Method (DBSCAN) Results
+### Advanced Method (DBSCAN) Results
 
 &nbsp;&nbsp;&nbsp;&nbsp;Building upon the preliminary baseline findings, Density-Based Spatial Clustering of Applications with Noise (DBSCAN) was implemented as the advanced method to overcome the spatial blindness and strict partitioning limitations of the K-Means algorithm.
 To provide true spatial intelligence to the model, the dataset was enriched by extracting the geographic centroid coordinates (Longitude and Latitude) for each H3 hexagonal cell. A four-dimensional feature space was constructed comprising:
