@@ -2,7 +2,7 @@
 <div align="center">
 
 # MIDDLE EAST TECHNICAL UNIVERSITY
-### DI722 - Spatio-Temporal Data Mining
+### DI722 - Spatio Temporal Data Mining
 #### Final Project Presentation
 
 <br>
