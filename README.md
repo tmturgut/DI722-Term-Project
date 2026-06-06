@@ -269,23 +269,28 @@ In addition to the spatial distribution, a detailed statistical evaluation was c
 ### Models / Software Used
 &nbsp;&nbsp;&nbsp;&nbsp; The researchers implemented the DBSCAN and K-means++ clustering algorithms. The Analytic Hierarchy Process (AHP) and Entropy weight models were used for statistical calculations.  ArcGIS was utilized for spatial analysis, grid division, and the visualization of the final flood risk maps.
 
-## 5.	...
-**DOI:** [10.1016/j.envsoft.2021.105210](https://doi.org/10.1016/j.envsoft.2021.105210) (bu kısım dogru sekilde degistirilecek)
-
+## 5.	Profiles of social vulnerability for flood risk reduction
+**DOI:** [[10.1016/j.ijdrr.2025.105250](https://doi.org/10.1016/j.ijdrr.2025.105250)
 ### Relevance to the Term Project
-&nbsp;&nbsp;&nbsp;&nbsp; literatur taramam sonucu bulacagim 5.makale ile bu basligi dolduracagim.
-### Subject
-&nbsp;&nbsp;&nbsp;&nbsp; literatur taramam sonucu bulacagim 5.makale ile bu basligi dolduracagim.
+ &nbsp;&nbsp;&nbsp;&nbsp; This article provides strong conceptual and methodological justification for shifting from traditional aggregate vulnerability indices to spatial clustering approaches (profiles) [cite: 9, 10]. It scientifically validates our decision to use advanced spatial clustering (DBSCAN and K-Means) to model intersectional socio-environmental vulnerabilities, proving that clustering algorithms can pinpoint specific flood risk hotspots and tailored archetypes (e.g., "Flooded but Wealthy" vs. "True Hotspots") without losing critical demographic nuances.
+
+#### Subject
+&nbsp;&nbsp;&nbsp;&nbsp; Identifying major archetypes of compound social vulnerability in the context of flood exposure in the United States by generating spatial typologies (Social Vulnerability Profiles - SVPs) rather than relying on traditional aggregate vulnerability indices.
+
 ### Inputs
-&nbsp;&nbsp;&nbsp;&nbsp; literatur taramam sonucu bulacagim 5.makale ile bu basligi dolduracagim.
+&nbsp;&nbsp;&nbsp;&nbsp; A robust set of 24 demographic census variables (e.g., age dependency, disability, linguistic isolation, rent, and unemployment), continental-scale fluvial and pluvial flood hazard data (500-year floodplain), and high-resolution building footprints to assess physical exposure.
+
 ### Method
-&nbsp;&nbsp;&nbsp;&nbsp; literatur taramam sonucu bulacagim 5.makale ile bu basligi dolduracagim.
+&nbsp;&nbsp;&nbsp;&nbsp; The study utilized Principal Component Analysis (PCA) to reduce data collinearity, followed by Hierarchical Clustering on Principal Components (HCPC) using Ward’s method to group the data into distinct spatial profiles. The spatial autocorrelation of the resulting clusters was evaluated using join count statistics via a Monte-Carlo simulation.
+
 ### Outputs
-&nbsp;&nbsp;&nbsp;&nbsp; literatur taramam sonucu bulacagim 5.makale ile bu basligi dolduracagim.
+&nbsp;&nbsp;&nbsp;&nbsp; Six distinct spatial profiles of social vulnerability and flood exposure emerged from the clustering analysis. The research revealed that places with similar aggregate vulnerability scores actually possess fundamentally different intersectional characteristics (e.g., high exposure combined with linguistic isolation vs. low exposure with age dependency). This proves that spatial clustering provides actionable, localized intelligence for equitable flood adaptation that traditional indices obscure.
+
 ### Data Sources & Resolutions
-&nbsp;&nbsp;&nbsp;&nbsp; literatur taramam sonucu bulacagim 5.makale ile bu basligi dolduracagim.
+ &nbsp;&nbsp;&nbsp;&nbsp; The study focused on the Contiguous United States (CONUS) at the census tract scale, analyzing 82,737 tracts. Demographic data was sourced from the 2017–2021 American Community Survey (ACS) [cite: 18]. Flood grids (10m resolution) integrating fluvial and pluvial hazards were acquired from Fathom, and exposure was apportioned using 129 million Microsoft Building Footprints.
+
 ### Models / Software Used
-&nbsp;&nbsp;&nbsp;&nbsp; literatur taramam sonucu bulacagim 5.makale ile bu basligi dolduracagim.
+&nbsp;&nbsp;&nbsp;&nbsp; The researchers implemented Hierarchical Clustering on Principal Components (HCPC) utilizing Ward's method to generate the multidimensional profiles, and employed join count statistics combined with permutation tests to measure spatial autocorrelation and spatial clustering effects.
 
 </div>
 
