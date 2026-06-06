@@ -277,4 +277,11 @@ In addition to the spatial distribution, a detailed statistical evaluation was c
 
 ### Advance Method (DBSCAN) Results
 
-&nbsp;&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&nbsp;&nbsp;Building upon the preliminary baseline findings, Density-Based Spatial Clustering of Applications with Noise (DBSCAN) was implemented as the advanced method to overcome the spatial blindness and strict partitioning limitations of the K-Means algorithm.
+To provide true spatial intelligence to the model, the dataset was enriched by extracting the geographic centroid coordinates (Longitude and Latitude) for each H3 hexagonal cell. A four-dimensional feature space was constructed comprising:
+* Flood Percentage
+* Social Deprivation (IMD) Score
+* Longitude
+* Latitude
+To ensure equal mathematical weight during distance calculations and prevent features with larger numerical ranges from dominating the model, feature scaling (StandardScaler) was applied to the entire dataset.
+The DBSCAN algorithm was then executed with optimized parameters (ϵ = 0.3, MinPts = 5). Unlike K-Means, which forces every cell into a predefined cluster, DBSCAN successfully identified isolated, non-cohesive cells as spatial noise (Label: -1) and filtered them out. The algorithm detected 48 distinct, geographically continuous clusters across the study area. Through subsequent statistical evaluation of these clusters, specific groupings (Clusters 30 and 33) were pinpointed as the true socio-environmental "Red Alert" hotspots, representing the exact intersection of severe physical flood risk and critical social vulnerability.
