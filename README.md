@@ -335,6 +335,9 @@ To provide true spatial intelligence to the model, the dataset was enriched by e
 
 <h1 align="center">Analysis of the Advance Method (DBSCAN) Results</h1>
 
+### Statistical and Spatial Evaluation of the Advanced Model
+Building upon the initial exploratory findings, a comprehensive statistical and spatial evaluation was conducted to understand the advanced mathematical behavior of the DBSCAN algorithm. Unlike the baseline model, this evaluation highlights the algorithm's capability to incorporate spatial density, effectively filter out isolated spatial noise, and pinpoint genuine socio-environmental vulnerability hotspots. The characteristics and proportional distribution of these refined clusters are detailed below.
+
 <div align="center">
   
 <img width="1007" height="120" alt="Fig9" src="https://github.com/user-attachments/assets/3f040cb1-0c46-4221-8433-6b98a123374c" />
