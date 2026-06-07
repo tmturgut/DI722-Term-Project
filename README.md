@@ -92,7 +92,8 @@ Description: The IMD evaluates relative deprivation across neighborhoods by comb
 ### Data Sources & Resolutions
  &nbsp;&nbsp;&nbsp;&nbsp; The study draws on primary quantitative and qualitative data collected over a 16-year period (2002, 2009, 2012, 2016, and 2018). Contextual baseline data includes benthic community surveys (to track coral vs. macroalgae cover) and systematically sampled household surveys tracking population and expenditures. The specific network data was collected via structured in-person interviews (surveys) in 2016 and 2018. The resolution of the data is at the household level for the social network, the species level for the ecological network, and the individual gear-to-species level for social-ecological links
 ### Models / Software Used
-&nbsp;&nbsp;&nbsp;&nbsp;  The researchers used the MPNet software to implement the TERGM and ERGM procedures, obtain parameter estimates, and evaluate the Goodness of Fit for the modeled networks.
+&nbsp;&nbsp;&nbsp;&nbsp;  Algorithmic Translation of the Theory
+Rather than focusing on the statistical network software (TERGM/ERGM) used in the original study, our term project translates the sociological concept of "bunkering down" into a spatial data mining framework. We operationalize this theory by utilizing spatial clustering algorithms (**K-Means and DBSCAN** via Python's `scikit-learn`). These algorithms allow us to geographically pinpoint the isolated, socially vulnerable communities that lack bridging social capital during environmental disasters, successfully identifying and mapping them as severe socio-environmental "Hotspots" (Red Alert zones) across the UK.
 
 ## 2.	Discrete Global Grid Systems as scalable geospatial frameworks for characterizing coastal environments
 **DOI:** [10.1016/j.envsoft.2021.105210](https://doi.org/10.1016/j.envsoft.2021.105210)
