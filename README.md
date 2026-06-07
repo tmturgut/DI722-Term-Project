@@ -66,8 +66,6 @@ Description: The IMD evaluates relative deprivation across neighborhoods by comb
 ## General Description of the Baseline Method
 &nbsp;&nbsp;&nbsp;&nbsp;  In this term project, K-Means Clustering is selected as the baseline machine learning method. K-Means is a highly efficient, unsupervised learning algorithm that partitions data into distinct clusters based on feature similarity. The integrated dataset, structured within the H3 hexagonal grid system, contains both physical flood hazard probabilities and socio-economic deprivation (IMD) scores. This data will be fed into the K-Means algorithm to group the spatial units (hexagons) into fundamental categories, such as Low, Moderate, and High-Risk clusters.
 
-&nbsp;&nbsp;&nbsp;&nbsp;  *"To establish a purely attribute-based baseline, the K-Means algorithm was intentionally trained without geographic coordinates (spatially blind). This highlights the limitations of traditional models, which is subsequently addressed by DBSCAN's spatial density awareness utilizing Latitude and Longitude."
-
  &nbsp;&nbsp;&nbsp;&nbsp; At this baseline stage, the clustering relies on the statistical attributes of the data rather than their geographical proximity or spatial density. The reason for establishing this K-Means as a baseline is:
  
 •	It provides a fundamental understanding of the statistical correlations between flood exposure and social vulnerability.
@@ -75,6 +73,8 @@ Description: The IMD evaluates relative deprivation across neighborhoods by comb
 •	it serves as a performance benchmark.
 
  &nbsp;&nbsp;&nbsp;&nbsp; In the subsequent phases of the project, this attribute-based baseline will be compared against advanced spatial algorithms, specifically DBSCAN (Density-Based Spatial Clustering of Applications with Noise). This comparison will demonstrate the added value of incorporating spatial neighborhood dynamics and density into identifying critical vulnerability hotspots.
+
+ &nbsp;&nbsp;&nbsp;&nbsp;  *"To establish a purely attribute-based baseline, the K-Means algorithm was intentionally trained without geographic coordinates (spatially blind). This highlights the limitations of traditional models, which is subsequently addressed by DBSCAN's spatial density awareness utilizing Latitude and Longitude."
 
 <h1 align="center">Literature Review</h1>
 
