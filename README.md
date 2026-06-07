@@ -406,3 +406,6 @@ Building upon the initial exploratory findings, a comprehensive statistical and 
 
 &nbsp;&nbsp;&nbsp;&nbsp; Conclusion: Overall, DBSCAN outperformed the baseline K-Means method by providing a density-based, spatially-aware, and noise-filtered analysis. This advanced method effectively translates raw socio-environmental datasets into actionable, contiguous vulnerability hotspots, proving that advanced spatial data mining algorithms are essential for complex urban hazard mapping.
 
+<h1 align="center">Model Validation & Actionability</h1>
+&nbsp;&nbsp;&nbsp;&nbsp;Unsupervised learning metrics like DBI or SSE, DBSCAN (noise: -1)
+don't offer a fair comparison because it filters out noise, but K-Means forcibly assigns all data. Therefore, instead of mathematical metrics, the UK Environment Agency (EA) flood boundaries and spatial validation were used, focusing on actionable intelligence.
