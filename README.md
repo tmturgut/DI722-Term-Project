@@ -74,7 +74,7 @@ Description: The IMD evaluates relative deprivation across neighborhoods by comb
 
  &nbsp;&nbsp;&nbsp;&nbsp; In the subsequent phases of the project, this attribute-based baseline will be compared against advanced spatial algorithms, specifically DBSCAN (Density-Based Spatial Clustering of Applications with Noise). This comparison will demonstrate the added value of incorporating spatial neighborhood dynamics and density into identifying critical vulnerability hotspots.
 
- &nbsp;&nbsp;&nbsp;&nbsp;  *"To establish a purely attribute-based baseline, the K-Means algorithm was intentionally trained without geographic coordinates (spatially blind). This highlights the limitations of traditional models, which is subsequently addressed by DBSCAN's spatial density awareness utilizing Latitude and Longitude."
+ &nbsp;&nbsp;&nbsp;&nbsp;  To establish a purely attribute-based baseline, the K-Means algorithm was intentionally trained without geographic coordinates (spatially blind). This highlights the limitations of traditional models, which is subsequently addressed by DBSCAN's spatial density awareness utilizing Latitude and Longitude.
 
 <h1 align="center">Literature Review</h1>
 
