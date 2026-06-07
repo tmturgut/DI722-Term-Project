@@ -409,3 +409,11 @@ Building upon the initial exploratory findings, a comprehensive statistical and 
 <h1 align="center">Model Validation & Actionability</h1>
 &nbsp;&nbsp;&nbsp;&nbsp;Unsupervised learning metrics like DBI or SSE, DBSCAN (noise: -1)
 don't offer a fair comparison because it filters out noise, but K-Means forcibly assigns all data. Therefore, instead of mathematical metrics, the UK Environment Agency (EA) flood boundaries and spatial validation were used, focusing on actionable intelligence.
+
+<h1 align="center">Limitations & Future Work</h1>
+&nbsp;&nbsp;&nbsp;&nbsp; There are a few limitations must be acknowledged for future improvements:
+
+* **Ecological Fallacy in Data Downscaling:** The socio-economic data (IMD scores) utilized in this study were originally aggregated at the broader LSOA (Mahalle) level. Harmonizing this data into finer H3 Resolution 8 hexagons inherently assumes a uniform distribution of wealth and deprivation across the entire LSOA polygon. This introduces the risk of the **Ecological Fallacy**, as micro-level (household) variations within a single hexagon might be masked by the neighborhood average.
+* **Subjectivity of DBSCAN Parameters:** The success of the advanced model heavily relies on the selected hyperparameters (`eps = 0.3` and `min_samples = 5`). Although these thresholds were iteratively optimized within the standardized multidimensional feature space, density-based clustering inherently involves **subjectivity**. Slight modifications to these parameters could alter the precise geographical boundaries of the "True Hotspots" or classify smaller vulnerable pockets as spatial noise.
+* **Lack of Temporal Aspect & Future Work:** Aligning with the *Spatio-Temporal Data Mining* framework, this project successfully executed a robust static *spatial* analysis (a current snapshot of flood risks and social deprivation). However, it lacks a dynamic *temporal* dimension. For **Future Work**, the methodology should be upgraded to incorporate time-series data (e.g., changing socio-economic trends over decades or seasonal flood variations) by deploying **ST-DBSCAN (Spatio-Temporal DBSCAN)**. This would allow decision-makers to track the migration and persistence of socio-environmental hotspots over time.
+
