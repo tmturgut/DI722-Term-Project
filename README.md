@@ -33,6 +33,16 @@ Water Resources Division <br>
  
 ## Study Area
  &nbsp;&nbsp;&nbsp;&nbsp; This term project's geographical focus includes the Thames River Basin in the United Kingdom and the Greater London area. Because of its unique combination of complex riverine and coastal flood exposure along with a variety of socioeconomic neighborhood profiles, this area was chosen as the spatial bounding box (Extent: X: 499000 to 585000, Y: 138000 to 191000 in EPSG:27700, British National Grid). 
+
+ <div align="center">
+
+<img width="1257" height="527" alt="Screenshot 2026-06-12 at 13 10 13" src="https://github.com/user-attachments/assets/2606e5ea-474e-4bc8-b3c2-aaf86026e9ce" />
+
+<br>
+
+<i><b>Fig:</b> Study Area</i>
+
+</div>
  
 ## Dataset Introduction
  To achieve the objectives of this spatial data mining project, two distinct and open-source datasets from the United Kingdom are utilized. These datasets provide the foundational physical and socio-economic variables required for the clustering analysis.
